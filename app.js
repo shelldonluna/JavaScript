@@ -86,7 +86,7 @@ const resultado7 = 5 !== 6
 const resultado8 = 5 !== '5'
 
 // operadores logicos or || and  && y not !
-
+//voy a agregar un comentario
 const resultadoOr = false || true
 
 const resultadoAnd = false && false
