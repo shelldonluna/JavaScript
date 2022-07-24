@@ -1,0 +1,3 @@
+
+
+consolelog(nombre)
