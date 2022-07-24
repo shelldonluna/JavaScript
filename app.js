@@ -92,4 +92,7 @@ const resultadoOr = false || true
 const resultadoAnd = false && false
 
 const resultadoNot = !false
+
+const resultado1 = 5
+
 console.log(resultadoNot)
