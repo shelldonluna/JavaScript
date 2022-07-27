@@ -64,7 +64,60 @@ if (edad > 5 &&edad <18) {
 // for (let i = 0; i < numeros.length; i++) {
 // 	console.log(numeros[i])
 // }
-
-function iterar () {
-	
+//funciones
+/* function iterar (arg1) {
+	 for (let i = 0; i < arg1.length; i++) {
+  	console.log(arg1[i])
+ }
 }
+const numeros = [1,2,'Hola',4,5]
+const nombres = ['pedro','juan','felipe', 'chanchito feliz','chanchito triste']
+
+iterar(numeros)
+iterar(nombres) */
+// funciones con el return hacia una constante y despues calcular el resultado
+/* function suma(a,b){
+	return (a+b)
+}
+
+const resultadoSuma1 = suma (1,3)
+const resultadoSuma2 = suma (5,6)
+const resultadoSuma3 = suma (resultadoSuma1,resultadoSuma2)
+console.log ('resultado',resultadoSuma3)
+ */
+/* function suma(a,b){
+	return (a+b)
+}
+const resultadoSuma1 = suma (1,3)
+const resultadoSuma2 = suma (5,6)
+const resultadoSuma3 = suma (resultadoSuma1,resultadoSuma2)
+console.log ('resultado',resultadoSuma3) */
+
+function sumar(a,b,cb) {
+	const r = a+b
+	cb(r)
+}
+
+function callback(result){
+	console.log ('resultado', result)
+}
+//callback (6)
+//sumar (2,3,callback) 
+
+//far arrow function 
+const miFatArrowFunction = (a,b) => (a +b)
+// si se utllizan los corchetes en las fat arrow se requere utilizar el return
+
+const otraFAF = (a,b) => {
+	return a+b
+ }
+//const r =miFatArrowFunction(2,3)
+const r= otraFAF (3,2)
+
+console.log('resultado', r)
+
+
+//funciones anonimas
+sumar (2,3,function (r) {
+	console.log('soy una funcion anonima y mi resutado s', r)
+})
