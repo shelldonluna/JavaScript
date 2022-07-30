@@ -116,7 +116,6 @@ const r= otraFAF (3,2)
 
 console.log('resultado', r)
 
-
 //funciones anonimas
 sumar (2,3,function (r) {
 	console.log('soy una funcion anonima y mi resutado s', r)

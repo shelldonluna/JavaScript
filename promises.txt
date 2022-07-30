@@ -1,0 +1,103 @@
+const a = b { b: 1 }
+VM93:1 Uncaught SyntaxError: Unexpected token '{'
+const a = { b: 1}
+undefined
+a
+{b: 1}
+const b = a
+undefined
+b
+{b: 1}
+a === b
+true
+b.c =2
+2
+b
+{b: 1, c: 2}
+a
+{b: 1, c: 2}
+const c = { ..a }
+VM331:1 Uncaught SyntaxError: Unexpected token '.'
+const c = { ...a }
+undefined
+c.d = 12
+12
+a ==== c
+VM395:1 Uncaught SyntaxError: Unexpected token '='
+a === c
+false
+Promise.resolve(2)
+Promise {<fulfilled>: 2}
+Promise.resolve(2)
+Promise {<fulfilled>: 2}
+Promise.resolve(2)
+Promise {<fulfilled>: 2}[[Prototype]]: Promise[[PromiseState]]: "fulfilled"[[PromiseResult]]: 2
+Promise.resolve(2)
+    .then(valor => console.log (valor))
+VM946:2 2
+Promise {<fulfilled>: undefined}
+Promise.resolve(2)
+    .then()
+Promise {<fulfilled>: 2}
+Promise.resolve(2)
+    .then(valor => valor + 1 )
+    .then(valor => console.log(valor))
+VM1205:3 3
+Promise {<fulfilled>: undefined}
+Promise.resolve(2)
+    .then(valor => valor + 1 )
+    .then(valor => console.log(valor))
+    .catch(e => console.error(e))
+VM1346:3 3
+Promise {<fulfilled>: undefined}
+Promise.reject(2)
+    .then(valor => valor + 1 )
+    .then(valor => console.log(valor))
+    .catch(e => console.error(e))
+VM1373:4 2
+(anonymous) @ VM1373:4
+Promise.catch (async)
+(anonymous) @ VM1373:4
+Promise {<fulfilled>: undefined}
+Promise.resolve(2)
+    .then(valor => Promise.reject(1) )
+    .then(valor => console.log(valor + 2))
+    .catch(e => console.error(e))
+VM1516:4 1
+(anonymous) @ VM1516:4
+Promise.catch (async)
+(anonymous) @ VM1516:4
+Promise {<fulfilled>: undefined}
+Promise.resolve(2)
+    .then(valor => (valor + 1) )
+    .then(valor => Promise.reject(2))
+    .catch(e => console.error(e))
+VM1611:4 2
+(anonymous) @ VM1611:4
+Promise.catch (async)
+(anonymous) @ VM1611:4
+Promise {<fulfilled>: undefined}
+new Promise ((resolve,reject) => {
+    setTimeout(() => resolve(), 1000)    
+})
+.then(x => console.log(x))
+.catch(e => console.error(e))
+Promise {<pending>}
+VM2215:4 undefined
+new Promise ((resolve,reject) => {
+    setTimeout(() => resolve(2), 1000)    
+})
+.then(x => console.log(x))
+.catch(e => console.error(e))
+Promise {<pending>}
+VM2228:4 2
+new Promise ((resolve,reject) => {
+    setTimeout(() => reject(2), 1000)    
+})
+.then(x => console.log(x))
+.catch(e => console.error(e))
+Promise {<pending>}
+VM2251:5 2
+(anonymous) @ VM2251:5
+Promise.catch (async)
+(anonymous) @ VM2251:5
